@@ -1,11 +1,4 @@
 import importlib.util, sys, subprocess, streamlit as st, pkgutil
-st.write("python:", sys.version)
-st.write("ultralytics spec:", importlib.util.find_spec("ultralytics"))
-st.write("site-packages in sys.path?", any("site-packages" in p for p in sys.path))
-st.write("Top-20 pip freeze:")
-out = subprocess.check_output([sys.executable, "-m", "pip", "freeze"]).decode().splitlines()
-st.code("\n".join(out[:20]))
-
 
 import streamlit as st
 import numpy as np
